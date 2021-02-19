@@ -42,7 +42,6 @@ class Index
 
     public function getUserList()
     {
-        var_dump(phpinfo());die;
         $userModel = new User();
         $where = [
             'id' => 1,
