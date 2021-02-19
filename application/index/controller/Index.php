@@ -1,5 +1,9 @@
 <?php
+
 namespace app\index\controller;
+
+use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Message\AMQPMessage;
 
 class Index
 {
@@ -11,5 +15,26 @@ class Index
     public function hello($name = 'ThinkPHP5')
     {
         return 'hello,' . $name;
+    }
+
+    public function send()
+    {
+        echo phpinfo();die;
+        $connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
+        $channel = $connection->channel();
+        $channel->queue_declare('task_queue', false, false, false, false);
+        if (empty($data)) $data = "Hello World!";
+        $msg = new AMQPMessage($data,
+            array('delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT) # 使消息持久化
+        );
+
+        $channel->basic_publish($msg, '', 'task_queue');
+
+        echo " [x] Sent ", $data, "\n";
+    }
+
+    public function swoole()
+    {
+        $http = $this->swoole();
     }
 }

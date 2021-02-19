@@ -1,14 +1,5 @@
-![](https://box.kancloud.cn/5a0aaa69a5ff42657b5c4715f3d49221) 
-
-ThinkPHP 5.1（LTS版本） —— 12载初心，你值得信赖的PHP框架
+ThinkPHP 5.1
 ===============
-
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/top-think/framework/badges/quality-score.png?b=5.1)](https://scrutinizer-ci.com/g/top-think/framework/?branch=5.1)
-[![Build Status](https://travis-ci.org/top-think/framework.svg?branch=master)](https://travis-ci.org/top-think/framework)
-[![Total Downloads](https://poser.pugx.org/topthink/framework/downloads)](https://packagist.org/packages/topthink/framework)
-[![Latest Stable Version](https://poser.pugx.org/topthink/framework/v/stable)](https://packagist.org/packages/topthink/framework)
-[![PHP Version](https://img.shields.io/badge/php-%3E%3D5.6-8892BF.svg)](http://www.php.net/)
-[![License](https://poser.pugx.org/topthink/framework/license)](https://packagist.org/packages/topthink/framework)
 
 ThinkPHP5.1对底层架构做了进一步的改进，减少依赖，其主要特性包括：
 
@@ -29,7 +20,7 @@ ThinkPHP5.1对底层架构做了进一步的改进，减少依赖，其主要特
  + Swoole/Workerman支持（V5.1.18+）
 
 
-> ThinkPHP5的运行环境要求PHP5.6以上，兼容PHP8.0。
+> ThinkPHP5的运行环境要求PHP5.6以上。
 
 ## 安装
 
@@ -62,12 +53,6 @@ composer update topthink/framework
 
 + [完全开发手册](https://www.kancloud.cn/manual/thinkphp5_1/content)
 + [升级指导](https://www.kancloud.cn/manual/thinkphp5_1/354155) 
-
-
-## 官方服务
-
-+ [应用服务市场](https://market.topthink.com/)
-+ [ThinkAPI——统一API服务](https://docs.topthink.com/think-api) 
 
 ## 目录结构
 
