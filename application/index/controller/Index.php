@@ -2,8 +2,10 @@
 
 namespace app\index\controller;
 
+use app\index\model\User;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
+use think\exception\PDOException;
 
 class Index
 {
@@ -36,5 +38,16 @@ class Index
     public function swoole()
     {
         $http = $this->swoole();
+    }
+
+    public function getUserList()
+    {
+        var_dump(phpinfo());die;
+        $userModel = new User();
+        $where = [
+            'id' => 1,
+        ];
+        $list = $userModel->findOrFail($where);
+        return $list;
     }
 }
