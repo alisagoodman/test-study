@@ -54,6 +54,7 @@ class Index
     public function getRedis()
     {
         $redis = new Redis();
+        $redis->open("./runtime","test-log");
         $redis->write("test1" . time(), "123");
         return $redis;
     }
