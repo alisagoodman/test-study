@@ -6,6 +6,7 @@ use app\index\model\User;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 use think\exception\PDOException;
+use think\session\driver\Redis;
 
 class Index
 {
@@ -48,5 +49,12 @@ class Index
         ];
         $list = $userModel->findOrFail($where);
         return $list;
+    }
+
+    public function getRedis()
+    {
+        $redis = new Redis();
+        $redis->write("test1" . time(), "123");
+        return $redis;
     }
 }
