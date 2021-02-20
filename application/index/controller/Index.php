@@ -41,7 +41,7 @@ class Index
     }
 
     public function getUserList()
-    {
+    {       
         $userModel = new User();
         $where = [
             'id' => 1,
