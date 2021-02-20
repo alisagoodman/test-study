@@ -53,8 +53,9 @@ class Index
 
     public function getRedis()
     {
+        $now = time();
         $redis = new \think\cache\driver\Redis();
-        $redis->set("test1" . time(), "123");
-        return $redis;
+        $redis->set("test-study" . $now, "123");
+        return $redis->get("test-study" . $now);
     }
 }
