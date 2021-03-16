@@ -58,4 +58,5 @@ class Index
         $redis->set("test-study" . $now, "123");
         return $redis->get("test-study" . $now);
     }
+
 }

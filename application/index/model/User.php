@@ -7,5 +7,5 @@ use think\Model;
 
 class User extends Model
 {
-    protected $table = 'ts_user';
+    protected $table = 'tp_user';
 }
