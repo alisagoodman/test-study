@@ -59,4 +59,16 @@ class Index
         return $redis->get("test-study" . $now);
     }
 
+    public function addUser()
+    {
+        $userModel = new User();
+        $arr = [
+            'name' => '小明',
+            'age' => 18,
+            'create_time' => time(),
+        ];
+        $res = $userModel->insert($arr);
+        return $res;
+    }
+
 }
