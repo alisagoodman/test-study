@@ -47,7 +47,7 @@ class Index
         $where = [
             'id' => 1,
         ];
-        $list = $userModel->findOrFail($where);
+        $list = $userModel->selectOrFail($where);
         return $list;
     }
 
